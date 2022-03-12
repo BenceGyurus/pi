@@ -26,9 +26,6 @@ class generate_Points{
         document.getElementById("body").innerHTML += `<div id = 'add'></div>`
         this.add_Size("add", this.size, this.size);
         this.set_Position_Of_Main_Div();
-        for (let i = 0; i < this.number_Of_Points;i++){
-            setTimeout(() => {this.generate_Points()}, 1);
-        }
     }
 
     static random_Id(length){
@@ -95,6 +92,7 @@ function run(){
         g.points_In_The_Circle = 0;
         window.runing = true;
         g.get_Size();
+        interval = setInterval(() => {g.generate_Points();g.number_Of_Points--; if (g.number_Of_Points < 1){clearInterval(interval);}}, 0.1);
         window.runing = false;
     }
 }
