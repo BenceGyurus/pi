@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="body">
+    </div>
+    <div id = "settings">
+        <div class = "grid">
+            <label class = "title_Label" for="size_Of_Points">Size of points</label>
+            <br />
+            <input class = "option" id = "size_Of_Points" type="number" placeholder = "1-5">
+        </div>
+        <div class = "grid">
+            <label class = "title_Label" for="size_Of_Points">Number of points</label>
+            <br />
+            <input class = "option" id = "all_Of_Points" type="number" placeholder = "1-1500">
+        </div>
+        <input type="button" value="Start" class = "start_Button" onclick = "run()"/>
+    </div>
+    <div id = "pi"></div>
+</body>
+<script src = "calc.js"></script>
+</html>

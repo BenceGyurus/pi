@@ -1,0 +1,47 @@
+*{
+    color: #424242;
+}
+
+#add{
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0px; padding: 0px;
+}
+
+.points{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+}
+.option{
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #424242;
+    padding: 3px;
+    margin: 10px 10px 10px 0px;
+    width: 20%;
+    outline: none;
+    display: inline-table;
+}
+
+.title_Label{
+    font-size: 15px;
+}
+
+.start_Button{
+    width: 20%;
+    font-size: 15px;
+    margin: 10px 10px 10px 0px;;
+    padding: 3px;
+    border: 1px solid #424242;
+    border-radius: 10px;
+}
+#pi{
+    margin: 0px;
+    padding: 10px;
+    display: inline-table;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
