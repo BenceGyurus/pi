@@ -68,7 +68,6 @@ class generate_Points{
     static generate_Points(){
         let id = this.random_Id(10);
         document.getElementById("add").innerHTML += `<div id = '${id}' class = 'points'></div>`;
-        console.log(this.point_Size);
         this.add_Size(id, this.point_Size, this.point_Size);
         this.add_Random_Position(id);
     }
@@ -90,7 +89,7 @@ function run(){
         size_Of_Point = Number(document.getElementById("size_Of_Points").value);
         all_Of_Points = all_Of_Points ?  all_Of_Points: 100;
         size_Of_Point = size_Of_Point ? size_Of_Point: 1;
-        g.number_Of_Points = all_Of_Points>1500||all_Of_Points<0 ? 1500: all_Of_Points;
+        g.number_Of_Points = all_Of_Points>1500||all_Of_Points<0 ? 100: all_Of_Points;
         g.point_Size = size_Of_Point>5||size_Of_Point<0 ? 5: size_Of_Point;
         g.all_Of_Points = 0;
         g.points_In_The_Circle = 0;
