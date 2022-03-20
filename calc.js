@@ -63,6 +63,7 @@ class generate_Points{
     }
 
     static generate_Points(){
+        window.runing = true;
         let id = this.random_Id(10);
         document.getElementById("add").innerHTML += `<div id = '${id}' class = 'points'></div>`;
         this.add_Size(id, this.point_Size, this.point_Size);
@@ -78,8 +79,14 @@ class generate_Points{
 
 }
 
+function end_Of_Interval(interval){
+    window.runing = false;
+    clearInterval(interval)
+}
+
 function run(){
-    if (!runing){
+    if (!window.runing){
+        window.runing = true;
         document.getElementById("body").innerHTML = "";
         g = generate_Points;
         all_Of_Points = Number(document.getElementById("all_Of_Points").value);
@@ -90,9 +97,7 @@ function run(){
         g.point_Size = size_Of_Point>5||size_Of_Point<0 ? 5: size_Of_Point;
         g.all_Of_Points = 0;
         g.points_In_The_Circle = 0;
-        window.runing = true;
         g.get_Size();
-        interval = setInterval(() => {g.generate_Points();g.number_Of_Points--; if (g.number_Of_Points < 1){clearInterval(interval);}}, 0.1);
-        window.runing = false;
+        interval = setInterval(() => {g.generate_Points();g.number_Of_Points--; if (g.number_Of_Points < 1){end_Of_Interval(interval);}}, 0.1);
     }
 }
